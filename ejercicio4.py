@@ -1,14 +1,23 @@
 # EJERCICIO 4 : FIBONACCI SIN RECURSION
 
 def fibonacci(n):
-    if n <= 0 :
-        return []
-    elif n == 1 :
-        return[0]
     
-    fib =[0, 1]
-    for i in range ( 2 , n ):
-        fib.append(fib[i-1]+fib[i-2])
-    return fib    
-
-fibonacci( 5)
+    a = 1
+    b = 1
+    
+    if n == 1:
+        print(0)
+    elif n == 2:
+        print(0,1) 
+        
+    else:
+        print(0)
+        print(a)
+        print(b)
+        for i in range (n -2):
+            total = a + b
+            b = a
+            a = total
+            
+            print(total)            
+fibonacci( 7)
